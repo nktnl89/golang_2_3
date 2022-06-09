@@ -1,8 +1,11 @@
 package golang_2_3
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
-// Echo returns message twice
+// Echo returns message and random int
 func Echo(message string) string {
-	return fmt.Sprintf("%s, - %s", message, message)
+	return fmt.Sprintf("%s, - %d", message, rand.Int())
 }
